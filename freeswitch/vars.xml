@@ -1,0 +1,14 @@
+<configuration name="vars.xml" description="Global variables">
+  <variables>
+    <X-PRE-PROCESS cmd="set" data="domain_name=freeswitch.local"/>
+    <X-PRE-PROCESS cmd="set" data="external_rtp_ip=auto"/>
+    <X-PRE-PROCESS cmd="set" data="external_sip_ip=auto"/>
+  </variables>
+  <settings>
+    <gateway name="asterisk">
+      <param name="username" value="1001"/>
+      <param name="password" value="password123"/>
+      <param name="proxy" value="asterisk:5060"/>
+    </gateway>
+  </settings>
+</configuration>
