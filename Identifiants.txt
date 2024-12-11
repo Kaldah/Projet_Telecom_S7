@@ -1,5 +1,14 @@
 1001@localhost:5061
 1002@localhost:5061
 
+
+1003@localhost:5061
+1004@localhost:5061
+
+sip:1003@localhost:5061
+
 password123
 
+
+Emplacement sonneries:
+C:\Program Files\Linphone\share\sounds\linphone\rings
