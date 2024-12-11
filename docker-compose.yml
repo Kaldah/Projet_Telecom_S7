@@ -3,8 +3,8 @@ services:
     image: andrius/asterisk
     container_name: asterisk
     ports:
-      - "5061:5061/tcp"               # SIP TCP
-      - "5060:5060/udp"               # SIP UDP pour Asterisk
+      - "5062:5061/tcp"               # SIP TCP
+      - "5061:5060/udp"               # SIP UDP pour Asterisk
       - "5080:5080/udp"               # SIP Proxy pour Asterisk
       - "10000-10099:10000-10099/udp" # RTP pour Asterisk
     volumes:
@@ -12,7 +12,7 @@ services:
       - ./asterisk/extensions.conf:/etc/asterisk/extensions.conf
     restart: always
     networks:
-      sip-network:
+      test_telecom:
 
   freeswitch:
     image: safarov/freeswitch
@@ -25,8 +25,8 @@ services:
       - ./freeswitch/freeswitch.conf:/etc/freeswitch/vars.xml
     restart: always
     networks:
-      sip-network:
+      test_telecom:
 
 networks:
-  sip-network:
+  test_telecom:
     driver: bridge
