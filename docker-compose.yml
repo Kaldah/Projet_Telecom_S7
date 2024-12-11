@@ -3,12 +3,12 @@ services:
     image: andrius/asterisk
     container_name: asterisk
     ports:
-      - "5062:5061/tcp"               # SIP TCP
+      - "5061:5060/tcp"               # SIP TCP
       - "5061:5060/udp"               # SIP UDP pour Asterisk
       - "5080:5080/udp"               # SIP Proxy pour Asterisk
       - "10000-10099:10000-10099/udp" # RTP pour Asterisk
     volumes:
-      - ./asterisk/sip.conf:/etc/asterisk/pjsip.conf
+      - ./asterisk/pjsip.conf:/etc/asterisk/pjsip.conf
       - ./asterisk/extensions.conf:/etc/asterisk/extensions.conf
     restart: always
     networks:
