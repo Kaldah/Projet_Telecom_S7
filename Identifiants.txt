@@ -12,3 +12,8 @@ password123
 
 Emplacement sonneries:
 C:\Program Files\Linphone\share\sounds\linphone\rings
+
+docker network create --driver bridge test_telecom
+
+docker exec -it asterisk sh
+asterisk -rvvv
